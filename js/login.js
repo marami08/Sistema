@@ -5,6 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
 
+
     try {
         // Llamada a la API de autenticación en el servidor
         const response = await fetch('/login', {
@@ -30,4 +31,6 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         errorMessage.textContent = 'Error en el servidor.';
         errorMessage.style.display = 'block';
     }
+
+
 });
